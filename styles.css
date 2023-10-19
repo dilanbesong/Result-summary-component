@@ -34,6 +34,7 @@ body {
   color: #ccc;
   font-weight: 500;
 }
+
 .gradeContainer .circle {
   background: linear-gradient(rgba(0, 0, 0, 0.45), #1136cb);
   width: 200px;
@@ -50,7 +51,12 @@ body {
 .gradeContainer .circle small {
   color: #cccccccc;
 }
-
+/* .gradeContainer h3 {
+   font-size: 1.3rem;
+} */
+.gradeContainer h3::first-letter{
+  font-size: 1.4rem;
+}
 .gradeContainer .commentary {
   text-align: center;
   width: 50%;
@@ -71,29 +77,47 @@ body {
   overflow-x: hidden;
 }
 .summaryContainer h4 {
-  padding-left: 1rem;              
+ margin-left: 3rem; 
+ /* font-size: larger;              */
 }
 .summaryContainer article {
-  width: 85%;
+  width: 70%;
   display: flex;
   justify-content: space-between;
   padding: 0.5rem;
   height: 40px;
   padding: 1rem;
-  border-radius: 4px;
+  border-radius: 8px;
   align-self: center;
+}
+.summaryContainer article p {
+  letter-spacing:2px;
+  color: rgba(0, 0, 0, 0.9);
+  font-size: 14px;
 }
  .summaryContainer article.card_1{
    background-color: rgb(243, 213, 213);
 }
+.summaryContainer article.card_1 div span{
+  color: red;
+}
  .summaryContainer article.card_2{
    background-color: rgb(241, 241, 162);
+}
+.summaryContainer article.card_2 div span{
+  color:yellowgreen;
 }
  .summaryContainer article.card_3{
    background-color: rgb(156, 231, 156);
 }
+.summaryContainer article.card_3 div span{
+  color: green;
+}
  .summaryContainer article.card_4{
    background-color: rgb(164, 164, 243);
+}
+.summaryContainer article.card_4 div span{
+  color:blue;
 }
 
 .summaryContainer article div {
@@ -102,14 +126,19 @@ body {
    gap:6px;             
 }
 
-.summaryContainer p {
-   align-self: center;
+
+.summaryContainer .btnContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+   
 }
-.summaryContainer p button {
+.summaryContainer .btnContainer button {
   display: block;
+  align-self:center;
   outline: none;
   border: none;
-  width: 300px;
+  width:80%;
   padding: 0.5rem;
   border-radius:2rem;
   color: #fff;
@@ -117,6 +146,11 @@ body {
   font-size: 0.95rem;
   height: 40px;
   cursor: pointer;
+   transition: 500ms;
+}
+.summaryContainer p button:hover{
+   background-color: rgba(0, 0, 0, 1);
+   transition: 500ms;
 }
 @media screen and (max-width: 600px) {
   .container {
